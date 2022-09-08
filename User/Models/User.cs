@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace User
 {
@@ -8,12 +9,15 @@ namespace User
         public int Id { get; set; }
 
         [Required]
+        [DisplayName("First Name")]
         public string FirstName { get; set; }
 
         [Required]
+        [DisplayName("Last Name")]
         public string LastName { get; set; }
 
         [Required]
+        [DisplayName("Email Address")]
         [DataType(DataType.EmailAddress, ErrorMessage = "E-mail is not valid")]
         public string EmailAddress { get; set; }
 
